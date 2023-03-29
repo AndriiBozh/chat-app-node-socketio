@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js"
+      integrity="sha512-xbQU0+iHqhVt7VIXi6vBJKPh3IQBF5B84sSHdjKiSccyX/1ZI7Vnkt2/8y8uruj63/DVmCxfUNohPNruthTEQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <script src="/socket.io/socket.io.js"></script>-->
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="chat.css" />
+    <title>Chat App</title>
+  </head>
+  <body>
+    <div class="container">
+      <p class="header">Chat App</p>
+      <div class="main">
+        <div class="all-messages-container">
+          <div class="public-messages-container" id="public-messages-container">
+            <ul id="public-messages"></ul>
+          </div>
+
+          <div
+            class="private-messages-container"
+            id="private-messages-container"
+          >
+            <button
+              class="hide-show-public-messages-btn"
+              id="hide-show-public-messages-btn"
+            >
+              <i
+                class="fa fa-chevron-up"
+                id="chevron-up"
+                title="hide public window"
+              ></i>
+              <i
+                class="fa-solid fa-chevron-down hide-chevron"
+                id="chevron-down"
+                title="show public window"
+              ></i>
+            </button>
+            <button
+              class="clear-private-window"
+              id="clear-private-window"
+              title="clear private window"
+            >
+              <i class="fa-solid fa-trash" id="trash-icon"></i>
+            </button>
+
+            <ul id="private-messages"></ul>
+            <div class="typing-status" id="typing-status"></div>
+          </div>
+        </div>
+        <div class="aside-container">
+          <ul class="users-list" id="users-container"></ul>
+          <ul class="rooms-list">
+            <li class="room">
+              <input type="button" id="room-1" value="room-1" />
+            </li>
+            <li class="room">
+              <input type="button" id="room-2" value="room-2" />
+            </li>
+            <li class="room">
+              <input type="button" id="room-3" value="room-3" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="controls">
+        <form action="" id="send-message-form">
+          <input type="text" placeholder="Message to:" id="addressee-input" />
+          <input
+            type="text"
+            placeholder="Type your message here"
+            id="message-input"
+          /><button id="send-public-message-btn">Send</button>
+        </form>
+        <button id="send-private-message-btn">Private msg</button>
+        <a href="/">Leave Chat</a>
+      </div>
+    </div>
+  </body>
+</html>

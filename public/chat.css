@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  background-color: pink;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  font-weight: bold;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-grow: 2;
+}
+
+.all-messages-container {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.public-messages-container {
+  background-color: rgb(233, 231, 231);
+  border: 1px solid rgb(57, 56, 56);
+  flex-grow: 1;
+  height: 20rem;
+  overflow-y: auto;
+  transition: all 1s;
+}
+
+.hide-public-messages-container {
+  flex-grow: 0;
+  height: 0;
+}
+
+.private-messages-container {
+  background-color: rgb(208 208 208);
+  position: relative;
+  height: 15rem;
+  overflow-y: auto;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(222 218 215);
+  margin: 1rem 1rem 0 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.message-details {
+  color: green;
+  margin-bottom: 5px;
+}
+
+.message-author {
+  font-weight: bold;
+}
+
+.message-sent-to {
+  font-weight: bold;
+}
+
+.message-sent-time {
+  font-style: italic;
+}
+
+.hide-show-public-messages-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+}
+
+.hide-chevron {
+  display: none;
+}
+
+.hide-show-public-messages-btn i .typing-status {
+  color: rgb(163, 162, 162);
+}
+
+.clear-private-window {
+  position: absolute;
+  right: 10px;
+  top: 36px;
+  color: red;
+  opacity: 0.7;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+.clear-private-window:hover {
+  opacity: 1;
+}
+
+.aside-container {
+  background-color: blueviolet;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.users-list {
+  flex-grow: 1;
+  overflow-y: scroll;
+  height: 10rem;
+}
+
+.controls {
+  height: 5rem;
+  background-color: beige;
+}
+
+.addressee-btn {
+  background-color: #e1f0e1;
+  padding: 2px 7px;
+  border: 0.5px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 1px 3px 5px -1px grey;
+}
+
+.addressee-btn:hover {
+  background-color: #f1f2f1;
+  transform: translateX(1px) translateY(1px);
+}
